@@ -1,0 +1,161 @@
+/* CSS pour une interface fluide en noir et blanc */
+
+body {
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0A0A0A; /* Fond noir très sombre */
+    color: #E0E0E0; /* Texte blanc cassé */
+    line-height: 1.6;
+}
+
+.container {
+    position: relative;
+    width: 90%; /* Fluidité */
+    max-width: 1200px; /* Largeur maximale */
+    margin: 20px auto; /* Centrage et espacement */
+    padding: 20px;
+    border: 1px solid #222; /* Bordure plus subtile */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    min-height: auto; /* Supprimer la hauteur fixe */
+}
+
+.header {
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    color: #4A90E2; /* Couleur d'accentuation bleue */
+    font-size: 2.5em; /* Un peu plus grand */
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.main-content {
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    color: #4A90E2; /* Couleur d'accentuation bleue */
+    border-bottom: 2px solid #222; /* Ligne de séparation plus moderne */
+    padding-bottom: 10px;
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Cartes de fonctionnalités pour les vidéos */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.feature-card {
+    background-color: #1A1A1A; /* Fond de carte plus distinct */
+    padding: 20px;
+    border: none; /* Supprimer la bordure */
+    border-radius: 12px; /* Coins plus arrondis */
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+/* Styles pour les iframes YouTube */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin-bottom: 20px; /* Plus d'espace */
+    border-radius: 8px; /* Coins arrondis pour les vidéos */
+    overflow: hidden; /* Assurer que les coins arrondis s'appliquent à l'iframe */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Rendre les images responsives et ajuster leur positionnement */
+.image-container {
+    display: flex;
+    justify-content: center; /* Centrer les images */
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px; /* Espacement entre les images */
+}
+
+.image1, .image2 {
+    width: 120px; /* Taille légèrement augmentée */
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4A90E2; /* Bordure d'accentuation */
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.5); /* Ombre lumineuse */
+}
+
+/* Media query pour la fluidité sur petits écrans */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 2em;
+    }
+
+    .image-container {
+        flex-direction: column;
+    }
+
+    .image1, .image2 {
+        margin-bottom: 15px;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Style pour les listes et paragraphes pour une meilleure lisibilité */
+ul, p {
+    color: #B0B0B0; /* Gris clair pour le corps du texte */
+    font-size: 1.05em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Nettoyage des balises <br> inutiles dans le HTML */
+.main-content br {
+    display: none;
+}
